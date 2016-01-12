@@ -125,7 +125,6 @@ minetest.register_abm(
 				and x1bd.drawtype == "normal"
 				and	x1b.name ~= "air" 
 				then
-	  	print(dump(nodef))
         minetest.set_node({x = pos.x + 1, y = pos.y, z = pos.z}, {name = "smoothhills:panel_dirt_with_grass_bottom",param2 = 3})
       end
 	        if x2.name == "air" 
