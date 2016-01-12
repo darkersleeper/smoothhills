@@ -1,57 +1,20 @@
-		minetest.register_node("smoothhills:panel_dirt_with_grass_bottom", {
+
+	minetest.register_node("smoothhills:panel_dirt_bottom", {
 		description = description,
 		drawtype = "nodebox",
-		tiles = {"default_grass.png", "default_dirt.png", "default_dirt.png^default_grass_side.png"},
+		tiles = {"default_dirt.png"},
 		paramtype = "light",
 		paramtype2 = "facedir",
 		pointable = true,
 		buildable_to = true,
 		is_ground_content = false,
 		sunlight_propagates = sunlight,
-		groups = {dig_immediate=3, crumbly=3, falling_node=1, dirt_with_grass=1},
+		groups = {dig_immediate=3, crumbly=3, falling_node=1, dirt=1},
 		sounds = default.node_sound_dirt_defaults(),
 		drop = "",
 		node_box = {
 			type = "fixed",
 			fixed = {-0.5, -0.5, 0, 0.5, 0, 0.5},
-		},
-	})
-	
-	minetest.register_node("smoothhills:panel_sand_bottom", {
-		description = description,
-		drawtype = "nodebox",
-		tiles = {"default_sand.png"},
-		paramtype = "light",
-		paramtype2 = "facedir",
-		pointable = true,
-		buildable_to = true,
-		is_ground_content = false,
-		sunlight_propagates = sunlight,
-		groups = {dig_immediate=3, crumbly=3, falling_node=1, sand=1},
-		sounds = default.node_sound_sand_defaults(),
-		drop = "",
-		node_box = {
-			type = "fixed",
-			fixed = {-0.5, -0.5, 0, 0.5, 0, 0.5},
-		},
-	})
-	
-	minetest.register_node("smoothhills:panel_sand_slab", {
-		description = description,
-		drawtype = "nodebox",
-		tiles = {"default_sand.png"},
-		paramtype = "light",
-		paramtype2 = "facedir",
-		pointable = true,
-		buildable_to = true,
-		is_ground_content = false,
-		sunlight_propagates = sunlight,
-		groups = {dig_immediate=3, crumbly=3, falling_node=1, sand=1},
-		sounds = default.node_sound_sand_defaults(),
-		drop = "",
-		node_box = {
-			type = "fixed",
-			fixed = {-0.5, -0.5, -0.5, 0.5, 0, 0.5},
 		},
 	})
 	minetest.register_node("smoothhills:panel_dirt_slab", {
@@ -72,90 +35,6 @@
 			fixed = {-0.5, -0.5, -0.5, 0.5, 0, 0.5},
 		},
 	})
-	minetest.register_node("smoothhills:panel_dirt_with_grass_slab", {
-		description = description,
-		drawtype = "nodebox",
-		tiles = {"default_grass.png", "default_dirt.png", "default_dirt.png^default_grass_side.png"},
-		paramtype = "light",
-		paramtype2 = "facedir",
-		pointable = true,
-		buildable_to = true,
-		is_ground_content = false,
-		sunlight_propagates = sunlight,
-		groups = {dig_immediate=3, crumbly=3, falling_node=1, dirt=1},
-		sounds = default.node_sound_dirt_defaults(),
-		drop = "",
-		node_box = {
-			type = "fixed",
-			fixed = {-0.5, -0.5, -0.5, 0.5, 0, 0.5},
-		},
-	})
-
-	minetest.register_node("smoothhills:corner_sand", {
-		description = description,
-		drawtype = "nodebox",
-		tiles = {"default_sand.png"},
-		paramtype = "light",
-		paramtype2 = "facedir",
-		pointable = true,
-		buildable_to = true,
-		is_ground_content = false,
-		sunlight_propagates = sunlight,
-		groups = {dig_immediate=3, crumbly=3, falling_node=1, sand=1},
-		sounds = default.node_sound_sand_defaults(),
-		drop = "",
-		node_box = {
-			type = "fixed",
-			fixed = {
-			{-0.5, -0.5, 0, 0.5, 0, 0.5},
-			{-0.5, -0.5, -0.5, 0, 0, 0},
-		},
-	}})
-	
-		minetest.register_node("smoothhills:corner_sand_high", {
-		description = description,
-		drawtype = "nodebox",
-		tiles = {"default_sand.png"},
-		paramtype = "light",
-		paramtype2 = "facedir",
-		pointable = true,
-		buildable_to = true,
-		is_ground_content = false,
-		sunlight_propagates = sunlight,
-		groups = {dig_immediate=3, crumbly=3, falling_node=1, sand=1},
-		sounds = default.node_sound_sand_defaults(),
-		drop = "",
-		node_box = {
-			type = "fixed",
-			fixed = {
-			{-0.5, -0.5, -0.5, 0, 0, 0.0625},
-			{-0.0625, -0.5, 0, 0.5, 0, 0.5},
-			{-0.5, -0.5, 0, 0, 0.5, 0.5},
-		},
-	}})
-	
-		minetest.register_node("smoothhills:corner_dirt_high", {
-		description = description,
-		drawtype = "nodebox",
-		tiles = {"default_dirt.png"},
-		paramtype = "light",
-		paramtype2 = "facedir",
-		pointable = true,
-		buildable_to = true,
-		is_ground_content = false,
-		sunlight_propagates = sunlight,
-		groups = {dig_immediate=3, crumbly=3, falling_node=1, dirt=1},
-		sounds = default.node_sound_dirt_defaults(),
-		drop = "",
-		node_box = {
-			type = "fixed",
-			fixed = {
-			{-0.5, -0.5, -0.5, 0, 0, 0.0625},
-			{-0.0625, -0.5, 0, 0.5, 0, 0.5},
-			{-0.5, -0.5, 0, 0, 0.5, 0.5},
-		},
-	}})
-	
 	minetest.register_node("smoothhills:corner_dirt", {
 		description = description,
 		drawtype = "nodebox",
@@ -176,7 +55,64 @@
 			{-0.5, -0.5, -0.5, 0, 0, 0},
 		},
 	}})
+	minetest.register_node("smoothhills:corner_dirt_high", {
+		description = description,
+		drawtype = "nodebox",
+		tiles = {"default_dirt.png"},
+		paramtype = "light",
+		paramtype2 = "facedir",
+		pointable = true,
+		buildable_to = true,
+		is_ground_content = false,
+		sunlight_propagates = sunlight,
+		groups = {dig_immediate=3, crumbly=3, falling_node=1, dirt=1},
+		sounds = default.node_sound_dirt_defaults(),
+		drop = "",
+		node_box = {
+			type = "fixed",
+			fixed = {
+			{-0.5, -0.5, -0.5, 0, 0, 0.0625},
+			{-0.0625, -0.5, 0, 0.5, 0, 0.5},
+			{-0.5, -0.5, 0, 0, 0.5, 0.5},
+		},
+	}})
 	
+	minetest.register_node("smoothhills:panel_dirt_with_grass_bottom", {
+		description = description,
+		drawtype = "nodebox",
+		tiles = {"default_grass.png", "default_dirt.png", "default_dirt.png^default_grass_side.png"},
+		paramtype = "light",
+		paramtype2 = "facedir",
+		pointable = true,
+		buildable_to = true,
+		is_ground_content = false,
+		sunlight_propagates = sunlight,
+		groups = {dig_immediate=3, crumbly=3, falling_node=1, dirt_with_grass=1},
+		sounds = default.node_sound_dirt_defaults(),
+		drop = "",
+		node_box = {
+			type = "fixed",
+			fixed = {-0.5, -0.5, 0, 0.5, 0, 0.5},
+		},
+	})
+	minetest.register_node("smoothhills:panel_dirt_with_grass_slab", {
+		description = description,
+		drawtype = "nodebox",
+		tiles = {"default_grass.png", "default_dirt.png", "default_dirt.png^default_grass_side.png"},
+		paramtype = "light",
+		paramtype2 = "facedir",
+		pointable = true,
+		buildable_to = true,
+		is_ground_content = false,
+		sunlight_propagates = sunlight,
+		groups = {dig_immediate=3, crumbly=3, falling_node=1, dirt=1},
+		sounds = default.node_sound_dirt_defaults(),
+		drop = "",
+		node_box = {
+			type = "fixed",
+			fixed = {-0.5, -0.5, -0.5, 0.5, 0, 0.5},
+		},
+	})
 	minetest.register_node("smoothhills:corner_dirt_with_grass", {
 		description = description,
 		drawtype = "nodebox",
@@ -197,8 +133,7 @@
 			{-0.5, -0.5, -0.5, 0, 0, 0},
 		},
 	}})
-	
-		minetest.register_node("smoothhills:corner_dirt_with_grass_high", {
+	minetest.register_node("smoothhills:corner_dirt_with_grass_high", {
 		description = description,
 		drawtype = "nodebox",
 		tiles = {"default_grass.png", "default_dirt.png", "default_dirt.png^default_grass_side.png"},
@@ -219,26 +154,237 @@
 			{-0.5, -0.5, 0, 0, 0.5, 0.5},
 		},
 	}})
-	
 
-
-
-
-	minetest.register_node("smoothhills:panel_dirt_bottom", {
+	minetest.register_node("smoothhills:panel_sand_bottom", {
 		description = description,
 		drawtype = "nodebox",
-		tiles = {"default_dirt.png"},
+		tiles = {"default_sand.png"},
 		paramtype = "light",
 		paramtype2 = "facedir",
 		pointable = true,
 		buildable_to = true,
 		is_ground_content = false,
 		sunlight_propagates = sunlight,
-		groups = {dig_immediate=3, crumbly=3, falling_node=1, dirt=1},
-		sounds = default.node_sound_dirt_defaults(),
+		groups = {dig_immediate=3, crumbly=3, falling_node=1, sand=1},
+		sounds = default.node_sound_sand_defaults(),
 		drop = "",
 		node_box = {
 			type = "fixed",
 			fixed = {-0.5, -0.5, 0, 0.5, 0, 0.5},
 		},
 	})
+	minetest.register_node("smoothhills:panel_sand_slab", {
+		description = description,
+		drawtype = "nodebox",
+		tiles = {"default_sand.png"},
+		paramtype = "light",
+		paramtype2 = "facedir",
+		pointable = true,
+		buildable_to = true,
+		is_ground_content = false,
+		sunlight_propagates = sunlight,
+		groups = {dig_immediate=3, crumbly=3, falling_node=1, sand=1},
+		sounds = default.node_sound_sand_defaults(),
+		drop = "",
+		node_box = {
+			type = "fixed",
+			fixed = {-0.5, -0.5, -0.5, 0.5, 0, 0.5},
+		},
+	})
+	minetest.register_node("smoothhills:corner_sand", {
+		description = description,
+		drawtype = "nodebox",
+		tiles = {"default_sand.png"},
+		paramtype = "light",
+		paramtype2 = "facedir",
+		pointable = true,
+		buildable_to = true,
+		is_ground_content = false,
+		sunlight_propagates = sunlight,
+		groups = {dig_immediate=3, crumbly=3, falling_node=1, sand=1},
+		sounds = default.node_sound_sand_defaults(),
+		drop = "",
+		node_box = {
+			type = "fixed",
+			fixed = {
+			{-0.5, -0.5, 0, 0.5, 0, 0.5},
+			{-0.5, -0.5, -0.5, 0, 0, 0},
+		},
+	}})
+	minetest.register_node("smoothhills:corner_sand_high", {
+		description = description,
+		drawtype = "nodebox",
+		tiles = {"default_sand.png"},
+		paramtype = "light",
+		paramtype2 = "facedir",
+		pointable = true,
+		buildable_to = true,
+		is_ground_content = false,
+		sunlight_propagates = sunlight,
+		groups = {dig_immediate=3, crumbly=3, falling_node=1, sand=1},
+		sounds = default.node_sound_sand_defaults(),
+		drop = "",
+		node_box = {
+			type = "fixed",
+			fixed = {
+			{-0.5, -0.5, -0.5, 0, 0, 0.0625},
+			{-0.0625, -0.5, 0, 0.5, 0, 0.5},
+			{-0.5, -0.5, 0, 0, 0.5, 0.5},
+		},
+	}})
+
+	minetest.register_node("smoothhills:panel_desert_sand_bottom", {
+		description = description,
+		drawtype = "nodebox",
+		tiles = {"default_desert_sand.png"},
+		paramtype = "light",
+		paramtype2 = "facedir",
+		pointable = true,
+		buildable_to = true,
+		is_ground_content = false,
+		sunlight_propagates = sunlight,
+		groups = {dig_immediate=3, crumbly=3, falling_node=1, desert_sand=1},
+		sounds = default.node_sound_sand_defaults(),
+		drop = "",
+		node_box = {
+			type = "fixed",
+			fixed = {-0.5, -0.5, 0, 0.5, 0, 0.5},
+		},
+	})
+	minetest.register_node("smoothhills:panel_desert_sand_slab", {
+		description = description,
+		drawtype = "nodebox",
+		tiles = {"default_desert_sand.png"},
+		paramtype = "light",
+		paramtype2 = "facedir",
+		pointable = true,
+		buildable_to = true,
+		is_ground_content = false,
+		sunlight_propagates = sunlight,
+		groups = {dig_immediate=3, crumbly=3, falling_node=1, desert_sand=1},
+		sounds = default.node_sound_sand_defaults(),
+		drop = "",
+		node_box = {
+			type = "fixed",
+			fixed = {-0.5, -0.5, -0.5, 0.5, 0, 0.5},
+		},
+	})
+	minetest.register_node("smoothhills:corner_desert_sand", {
+		description = description,
+		drawtype = "nodebox",
+		tiles = {"default_desert_sand.png"},
+		paramtype = "light",
+		paramtype2 = "facedir",
+		pointable = true,
+		buildable_to = true,
+		is_ground_content = false,
+		sunlight_propagates = sunlight,
+		groups = {dig_immediate=3, crumbly=3, falling_node=1, desert_sand=1},
+		sounds = default.node_sound_sand_defaults(),
+		drop = "",
+		node_box = {
+			type = "fixed",
+			fixed = {
+			{-0.5, -0.5, 0, 0.5, 0, 0.5},
+			{-0.5, -0.5, -0.5, 0, 0, 0},
+		},
+	}})
+	minetest.register_node("smoothhills:corner_desert_sand_high", {
+		description = description,
+		drawtype = "nodebox",
+		tiles = {"default_desert_sand.png"},
+		paramtype = "light",
+		paramtype2 = "facedir",
+		pointable = true,
+		buildable_to = true,
+		is_ground_content = false,
+		sunlight_propagates = sunlight,
+		groups = {dig_immediate=3, crumbly=3, falling_node=1, desert_sand=1},
+		sounds = default.node_sound_sand_defaults(),
+		drop = "",
+		node_box = {
+			type = "fixed",
+			fixed = {
+			{-0.5, -0.5, -0.5, 0, 0, 0.0625},
+			{-0.0625, -0.5, 0, 0.5, 0, 0.5},
+			{-0.5, -0.5, 0, 0, 0.5, 0.5},
+		},
+	}})
+
+	minetest.register_node("smoothhills:panel_gravel_bottom", {
+		description = description,
+		drawtype = "nodebox",
+		tiles = {"default_gravel.png"},
+		paramtype = "light",
+		paramtype2 = "facedir",
+		pointable = true,
+		buildable_to = true,
+		is_ground_content = false,
+		sunlight_propagates = sunlight,
+		groups = {dig_immediate=3, crumbly=3, falling_node=1, gravel=1},
+		sounds = default.node_sound_sand_defaults(),
+		drop = "",
+		node_box = {
+			type = "fixed",
+			fixed = {-0.5, -0.5, 0, 0.5, 0, 0.5},
+		},
+	})
+	minetest.register_node("smoothhills:panel_gravel_slab", {
+		description = description,
+		drawtype = "nodebox",
+		tiles = {"default_gravel.png"},
+		paramtype = "light",
+		paramtype2 = "facedir",
+		pointable = true,
+		buildable_to = true,
+		is_ground_content = false,
+		sunlight_propagates = sunlight,
+		groups = {dig_immediate=3, crumbly=3, falling_node=1, gravel=1},
+		sounds = default.node_sound_sand_defaults(),
+		drop = "",
+		node_box = {
+			type = "fixed",
+			fixed = {-0.5, -0.5, -0.5, 0.5, 0, 0.5},
+		},
+	})
+	minetest.register_node("smoothhills:corner_gravel", {
+		description = description,
+		drawtype = "nodebox",
+		tiles = {"default_gravel.png"},
+		paramtype = "light",
+		paramtype2 = "facedir",
+		pointable = true,
+		buildable_to = true,
+		is_ground_content = false,
+		sunlight_propagates = sunlight,
+		groups = {dig_immediate=3, crumbly=3, falling_node=1, gravel=1},
+		sounds = default.node_sound_sand_defaults(),
+		drop = "",
+		node_box = {
+			type = "fixed",
+			fixed = {
+			{-0.5, -0.5, 0, 0.5, 0, 0.5},
+			{-0.5, -0.5, -0.5, 0, 0, 0},
+		},
+	}})
+	minetest.register_node("smoothhills:corner_gravel_high", {
+		description = description,
+		drawtype = "nodebox",
+		tiles = {"default_gravel.png"},
+		paramtype = "light",
+		paramtype2 = "facedir",
+		pointable = true,
+		buildable_to = true,
+		is_ground_content = false,
+		sunlight_propagates = sunlight,
+		groups = {dig_immediate=3, crumbly=3, falling_node=1, gravel=1},
+		sounds = default.node_sound_sand_defaults(),
+		drop = "",
+		node_box = {
+			type = "fixed",
+			fixed = {
+			{-0.5, -0.5, -0.5, 0, 0, 0.0625},
+			{-0.0625, -0.5, 0, 0.5, 0, 0.5},
+			{-0.5, -0.5, 0, 0, 0.5, 0.5},
+		},
+	}})
