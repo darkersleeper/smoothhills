@@ -1,0 +1,1 @@
+Makes terrain smooth by adding half-size blocks on edges in terrain.
