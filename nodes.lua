@@ -80,7 +80,7 @@
 	minetest.register_node("smoothhills:panel_dirt_with_grass_bottom", {
 		description = description,
 		drawtype = "nodebox",
-		tiles = {"default_grass.png", "default_dirt.png", "default_dirt.png^default_grass_side.png"},
+		tiles = {"default_grass.png", "default_dirt.png", "[combine:16x16:0,0=default_dirt.png:0,7=default_grass_side.png"},
 		paramtype = "light",
 		paramtype2 = "facedir",
 		pointable = true,
@@ -98,7 +98,7 @@
 	minetest.register_node("smoothhills:panel_dirt_with_grass_slab", {
 		description = description,
 		drawtype = "nodebox",
-		tiles = {"default_grass.png", "default_dirt.png", "default_dirt.png^default_grass_side.png"},
+		tiles = {"default_grass.png", "default_dirt.png", "[combine:16x16:0,0=default_dirt.png:0,7=default_grass_side.png"},
 		paramtype = "light",
 		paramtype2 = "facedir",
 		pointable = true,
@@ -116,7 +116,7 @@
 	minetest.register_node("smoothhills:corner_dirt_with_grass", {
 		description = description,
 		drawtype = "nodebox",
-		tiles = {"default_grass.png", "default_dirt.png", "default_dirt.png^default_grass_side.png"},
+		tiles = {"default_grass.png", "default_dirt.png", "[combine:16x16:0,0=default_dirt.png:0,7=default_grass_side.png"},
 		paramtype = "light",
 		paramtype2 = "facedir",
 		pointable = true,
@@ -136,7 +136,7 @@
 	minetest.register_node("smoothhills:corner_dirt_with_grass_high", {
 		description = description,
 		drawtype = "nodebox",
-		tiles = {"default_grass.png", "default_dirt.png", "default_dirt.png^default_grass_side.png"},
+		tiles = {"default_grass.png", "default_dirt.png", "[combine:16x16:0,0=default_dirt.png:0,8=default_grass_side.png^default_grass_side.png"},
 		paramtype = "light",
 		paramtype2 = "facedir",
 		pointable = true,
