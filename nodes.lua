@@ -1,4 +1,3 @@
-
 	minetest.register_node("smoothhills:panel_dirt_bottom", {
 		description = description,
 		drawtype = "nodebox",

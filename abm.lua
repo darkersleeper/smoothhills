@@ -1,8 +1,98 @@
-
+-- delete pseudo blocks if no parent nearby
+	minetest.register_abm(
+   {nodenames = {"smoothhills:panel_dirt_bottom", "smoothhills:corner_dirt", "smoothhills:panel_dirt_slab", "smoothhills:corner_dirt_high"},
+   interval = 5,
+   chance = 1,
+   action = function(pos)
+      local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
+		local x2 = minetest.get_node({x = pos.x - 1, y = pos.y, z = pos.z})
+			local z1 = minetest.get_node({x = pos.x, y = pos.y, z = pos.z + 1})
+				local z2 = minetest.get_node({x = pos.x, y = pos.y, z = pos.z - 1})
+      if x1.name ~= "default:dirt"
+	  and x2.name ~= "default:dirt"
+	  and z1.name ~= "default:dirt"
+	  and z2.name ~= "default:dirt"
+				then
+        minetest.set_node(pos, {name="air"})
+      end
+	     end
+})
+	minetest.register_abm(
+   {nodenames = {"smoothhills:panel_dirt_with_grass_bottom", "smoothhills:corner_dirt_with_grass", "smoothhills:panel_dirt_with_grass_slab", "smoothhills:corner_dirt_with_grass_high"},
+   interval = 5,
+   chance = 1,
+   action = function(pos)
+      local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
+		local x2 = minetest.get_node({x = pos.x - 1, y = pos.y, z = pos.z})
+			local z1 = minetest.get_node({x = pos.x, y = pos.y, z = pos.z + 1})
+				local z2 = minetest.get_node({x = pos.x, y = pos.y, z = pos.z - 1})
+      if x1.name ~= "default:dirt_with_grass"
+	  and x2.name ~= "default:dirt_with_grass"
+	  and z1.name ~= "default:dirt_with_grass"
+	  and z2.name ~= "default:dirt_with_grass"
+				then
+        minetest.set_node(pos, {name="air"})
+      end
+	     end
+})
+	minetest.register_abm(
+   {nodenames = {"smoothhills:panel_sand_bottom", "smoothhills:corner_sand", "smoothhills:panel_sand_slab", "smoothhills:corner_sand_high"},
+   interval = 5,
+   chance = 1,
+   action = function(pos)
+      local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
+		local x2 = minetest.get_node({x = pos.x - 1, y = pos.y, z = pos.z})
+			local z1 = minetest.get_node({x = pos.x, y = pos.y, z = pos.z + 1})
+				local z2 = minetest.get_node({x = pos.x, y = pos.y, z = pos.z - 1})
+      if x1.name ~= "default:sand"
+	  and x2.name ~= "default:sand"
+	  and z1.name ~= "default:sand"
+	  and z2.name ~= "default:sand"
+				then
+        minetest.set_node(pos, {name="air"})
+      end
+	     end
+})
+	minetest.register_abm(
+   {nodenames = {"smoothhills:panel_desert_sand_bottom", "smoothhills:corner_desert_sand", "smoothhills:panel_desert_sand_slab", "smoothhills:corner_desert_sand_high"},
+   interval = 5,
+   chance = 1,
+   action = function(pos)
+      local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
+		local x2 = minetest.get_node({x = pos.x - 1, y = pos.y, z = pos.z})
+			local z1 = minetest.get_node({x = pos.x, y = pos.y, z = pos.z + 1})
+				local z2 = minetest.get_node({x = pos.x, y = pos.y, z = pos.z - 1})
+      if x1.name ~= "default:desert_sand"
+	  and x2.name ~= "default:desert_sand"
+	  and z1.name ~= "default:desert_sand"
+	  and z2.name ~= "default:desert_sand"
+				then
+        minetest.set_node(pos, {name="air"})
+      end
+	     end
+})
+	minetest.register_abm(
+   {nodenames = {"smoothhills:panel_gravel_bottom", "smoothhills:corner_gravel", "smoothhills:panel_gravel_slab", "smoothhills:corner_gravel_high"},
+   interval = 5,
+   chance = 1,
+   action = function(pos)
+      local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
+		local x2 = minetest.get_node({x = pos.x - 1, y = pos.y, z = pos.z})
+			local z1 = minetest.get_node({x = pos.x, y = pos.y, z = pos.z + 1})
+				local z2 = minetest.get_node({x = pos.x, y = pos.y, z = pos.z - 1})
+      if x1.name ~= "default:gravel"
+	  and x2.name ~= "default:gravel"
+	  and z1.name ~= "default:gravel"
+	  and z2.name ~= "default:gravel"
+				then
+        minetest.set_node(pos, {name="air"})
+      end
+	     end
+})
 	-- Dirt
 	minetest.register_abm(
    {nodenames = {"default:dirt"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
@@ -50,7 +140,7 @@
 })
     minetest.register_abm(
    {nodenames = {"smoothhills:panel_dirt_bottom"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
@@ -81,7 +171,7 @@
    })
     minetest.register_abm(
    {nodenames = {"smoothhills:panel_dirt_bottom","smoothhills:corner_dirt"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
@@ -99,7 +189,7 @@
    })
     minetest.register_abm(
    {nodenames = {"smoothhills:corner_dirt"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y + 1, z = pos.z})
@@ -132,7 +222,7 @@
 	-- Dirt with Grass
 	minetest.register_abm(
    {nodenames = {"default:dirt_with_grass"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
@@ -180,7 +270,7 @@
 })
     minetest.register_abm(
    {nodenames = {"smoothhills:panel_dirt_with_grass_bottom"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
@@ -211,7 +301,7 @@
    })
     minetest.register_abm(
    {nodenames = {"smoothhills:panel_dirt_with_grass_bottom","smoothhills:corner_dirt_with_grass"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
@@ -229,7 +319,7 @@
    })
     minetest.register_abm(
    {nodenames = {"smoothhills:corner_dirt_with_grass"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y + 1, z = pos.z})
@@ -262,7 +352,7 @@
 	-- Sand
 	minetest.register_abm(
    {nodenames = {"default:sand"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
@@ -310,7 +400,7 @@
 })
     minetest.register_abm(
    {nodenames = {"smoothhills:panel_sand_bottom"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
@@ -341,7 +431,7 @@
    })
     minetest.register_abm(
    {nodenames = {"smoothhills:panel_sand_bottom","smoothhills:corner_sand"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
@@ -359,7 +449,7 @@
    })
     minetest.register_abm(
    {nodenames = {"smoothhills:corner_sand"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y + 1, z = pos.z})
@@ -392,7 +482,7 @@
 	-- Desert Sand
 	minetest.register_abm(
    {nodenames = {"default:desert_sand"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
@@ -440,7 +530,7 @@
 })
     minetest.register_abm(
    {nodenames = {"smoothhills:panel_desert_sand_bottom"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
@@ -471,7 +561,7 @@
    })
     minetest.register_abm(
    {nodenames = {"smoothhills:panel_desert_sand_bottom","smoothhills:corner_desert_sand"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
@@ -489,7 +579,7 @@
    })
     minetest.register_abm(
    {nodenames = {"smoothhills:corner_desert_sand"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y + 1, z = pos.z})
@@ -522,7 +612,7 @@
 	-- Gravel
 	minetest.register_abm(
    {nodenames = {"default:gravel"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
@@ -570,7 +660,7 @@
 })
     minetest.register_abm(
    {nodenames = {"smoothhills:panel_gravel_bottom"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
@@ -601,7 +691,7 @@
    })
     minetest.register_abm(
    {nodenames = {"smoothhills:panel_gravel_bottom","smoothhills:corner_gravel"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z})
@@ -619,7 +709,7 @@
    })
     minetest.register_abm(
    {nodenames = {"smoothhills:corner_gravel"},
-   interval = 2,
+   interval = 10,
    chance = 1,
    action = function(pos)
       local x1 = minetest.get_node({x = pos.x + 1, y = pos.y + 1, z = pos.z})
